@@ -17,6 +17,20 @@ pipeline{
     
 
      }
+     post{
+          success{
+            // archiveArtifacts artifacts:"jenkinsfile/**"
+               echo "This would run when the pipeline runs successfully"
+
+          }
+            always{
+                    echo "This would alwasys run"
+                }
+            failure{
+                    echo "This would run when there is failure"
+                }    
+          
+     }
 
 
 
