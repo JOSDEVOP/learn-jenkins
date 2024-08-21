@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    environment{
+        engine="jibril"
+    }
      stages{
          stage('build'){
             steps{
@@ -7,6 +10,7 @@ pipeline{
 
                  sh'''
                   echo " jellos jibril"
+                  echo " hello " engine
                  '''            
             }
          }
