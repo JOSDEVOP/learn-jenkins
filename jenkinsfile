@@ -21,7 +21,8 @@ pipeline{
           success{
             // archiveArtifacts artifacts:"jenkinsfile/**"
             archiveArtifacts artifacts: 'jenkinsfile', followSymlinks: false
-               echo "This would run when the pipeline runs successfully"
+            archiveArtifacts artifacts: '.git', followSymlinks: false
+            echo "This would run when the pipeline runs successfully"
 
           }
             always{
