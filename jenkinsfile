@@ -9,9 +9,23 @@ pipeline{
                 // cleanWs() it cleans the directory.
 
                  sh'''
-                  echo " jellos jibril"
-                  echo " hello $engine" 
-                  sleep 600
+                 
+                  echo " jellos jibril am in the build stage"
+                  echo " hello  build $engine" 
+                   sleep 600
+                 
+                 '''            
+            }
+         }
+         stage('Test'){
+            steps{
+                // cleanWs() it cleans the directory.
+
+                 sh'''
+                  
+                  echo " I am in the stage"
+                  echo " hello  Test stage $engine" 
+                 
                  '''            
             }
          }
